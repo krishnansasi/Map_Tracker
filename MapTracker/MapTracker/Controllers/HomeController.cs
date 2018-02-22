@@ -26,5 +26,12 @@ namespace MapTracker.Controllers
 
             return View();
         }
+
+        public ActionResult SampleView()
+        {
+            ViewBag.Message = "Your Sample page.";
+
+            return View();
+        }
     }
 }
