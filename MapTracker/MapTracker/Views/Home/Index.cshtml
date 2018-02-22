@@ -1,4 +1,41 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvHLpuYuR_z0trjaeNchcMwtxac40uf_U&callback=initMap" type="text/javascript">
+</script>
+
+<script type="text/javascript">
+
+    var map;
+    function initMap() {
+        //maped
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: -34.397, lng: 150.644 },
+            zoom: 8
+        });
+
+        var myLatLng = new google.maps.LatLng(22.301803, 70.799217);
+        var myLatLng1 = new google.maps.LatLng(22.573438, 71.200905);
+
+        //marker..
+        var marker = new google.maps.Marker({
+            position: {
+                lat: -34.397,
+                lng: 150.644
+            },
+            map: map,
+            draggable: true
+        });
+
+
+    }
+</script>
+
+<div class="well" style="height:500px;" id="map">
+    <h4>Dashboard</h4>
+    <p>Some text..</p>
+
+</div>
